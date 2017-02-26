@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>css3下的渐变文字效果实现</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .text-gradient{
+                display: inline-block;
+                font-family: '微软雅黑';
+                font-size: 4em;
+                position: relative;
+                /*-webkit-mask-image: -webkit-gradient(linear,0 0,0 bottom,from(#ff0000), to(rgba(0,0,255,0)));*/
+            }
+            .text-gradient[data-text]::after{
+                content: attr(data-text);
+                color: green;
+                position: absolute;
+                left: 0;
+                z-index: 2;
+                -webkit-mask-image: -webkit-gradient(linear,0 0,0 bottom,from(#ff0000), to(rgba(0,0,255,0)));
+            }
+            .text-gradient2{
+                display: inline-block;
+                color: green;
+                font-size: 4em;
+                font-family: '微软雅黑';
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0,128,0,1)), to(rgba(51,51,51,1)));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .masked{
+                background-image: linear-gradient(to left, #147b96, #E6D205, 25%, #147B96 50%, #E6d205 75%, #147B96);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                animation: masked-animation 4s ease;
+                background-size: 200% 100%;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes masked-animation{
+                0%{
+                    background-position: 0 0;
+                }
+                100%{
+                    background-position: -100% 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="text-gradient" data-text="请回答1988">请回答1988</h2>
+        <h2 class="text-gradient2">请回答1988</h2>
+        <h2 class="masked">请回答1988</h2>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>有趣的鼠标悬浮模糊效果</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body, main::before{
+          background-image: url('img/1988.jpg');
+          background-size: cover;
+          background-position: 0;
+          background-attachment: fixed;
+      }
+      main{
+          background: hsla(0, 0%, 100%, .3);
+          position: relative;
+          margin-top: 40%;
+          overflow: hidden;
+      }
+      main::before{
+          content: '';
+          position: absolute;
+          top: 0;right: 0;bottom: 0;left: 0;
+          filter: blur(20px);
+          z-index: -1;
+          margin: -30px;
+      }
+    </style>
+</head>
+
+<body>
+  <main>
+    <blockquote cite="">
+      "The only way to get rid of a templation......"
+      <footer>-
+        <cite>
+          Oscar Wilde,
+          The Picture of Dorian Gray
+        </cite>
+      </footer>
+    </blockquote>
+  </main>
+</body>
+
+</html>
