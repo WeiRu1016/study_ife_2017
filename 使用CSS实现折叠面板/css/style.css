@@ -8,10 +8,11 @@ input[name="panel"] {
 }
 
 .panel-body {
-    display: none;
-    transition: all .5 ease;
-    padding: 10px;
+    transition: all .2s ease-in;
+    padding: 0 10px;
     text-align: left;
+    max-height: 0;
+    overflow: hidden;
 }
 
 .panel-heading {
@@ -22,5 +23,7 @@ input[name="panel"] {
 }
 
 input[name="panel"]:checked+.panel-body {
-    display: block;
+    max-height: 500px;
+    padding: 10px;
+    overflow: auto;
 }
