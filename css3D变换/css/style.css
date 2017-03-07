@@ -1,0 +1,110 @@
+.stage {
+    width: 200px;
+    height: 200px;
+    perspective: 1200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    animation: rotateAnimation 10s ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotateY(0deg)
+    }
+    10% {
+        transform: rotateY(36deg)
+    }
+    20% {
+        transform: rotateY(72deg)
+    }
+    30% {
+        transform: rotateY(98deg)
+    }
+    40% {
+        transform: rotateY(144deg)
+    }
+    50% {
+        transform: rotateY(180deg)
+    }
+    60% {
+        transform: rotateY(216deg)
+    }
+    70% {
+        transform: rotateY(252deg)
+    }
+    80% {
+        transform: rotateY(288deg)
+    }
+    90% {
+        transform: rotateY(324deg)
+    }
+}
+
+.item {
+    transform: translateZ(0px);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+}
+
+.item1 {
+    /*transform: translateZ(0px);*/
+    /*opacity: .6;*/
+}
+
+.item2 {
+    transform: translate3d(-347px, -20px, -200px) rotateY(-60deg);
+}
+
+.item3 {
+    transform: translate3d(347px, -20px, -200px) rotateY(60deg);
+}
+
+.item4 {
+    transform: translate3d(-400px, -40px, -600px) rotateY(-120deg);
+}
+
+.item5 {
+    transform: translate3d(400px, -40px, -600px) rotateY(120deg);
+}
+
+.item6 {
+    transform: translate3d(0px, 0px, -800px) rotateY(0deg);
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.gray {
+    background-color: gray;
+}

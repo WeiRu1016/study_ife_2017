@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>translateZ方法辅助理解perspective视角demo</title>
+    <style type="text/css">
+        .win {
+            width: 400px;
+            height: 400px;
+            perspective: 200px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        #zone {
+            background: red;
+            transform: translateZ(0px);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>当前translateZ值为：<span id="text">0</span></p>
+    <input type="range" max="300" min="-100" value="0" id="range">
+    <div class="win">
+        <div id="zone">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var range = document.getElementById('range'),
+            text = document.getElementById('text'),
+            zone = document.getElementById('zone');
+        range.onchange = function() {
+            text.innerText = range.value;
+            zone.style.transform = "translateZ(" + range.value + "px)"
+        }
+    </script>
+</body>
+
+</html>
