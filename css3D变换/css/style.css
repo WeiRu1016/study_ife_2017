@@ -8,42 +8,48 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.container {
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    animation: rotateAnimation 10s ease-in;
+    animation: rotateAnimation 15s ease;
     animation-iteration-count: infinite;
+    /*animation-direction: normal;*/
+    width: 100%;
+    height: 100%;
+    /*transform-origin: center center;*/
+    /*transform: translate3d()*/
+    /*transform: translate3d(-347px, 20px, 600px) rotateY(300deg)*/
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes rotateAnimation {
     0% {
-        transform: rotateY(0deg)
+        transform: translate3d(0px, 0px, 800px) rotateY(0deg);
+        /*transform: translate3d(0px, 0px, 0px) rotateY(0deg)*/
     }
-    10% {
-        transform: rotateY(36deg)
+    16.67% {
+        transform: translate3d(347px, 0px, 600px) rotateY(60deg)
     }
-    20% {
-        transform: rotateY(72deg)
-    }
-    30% {
-        transform: rotateY(98deg)
-    }
-    40% {
-        transform: rotateY(144deg)
+    33.33% {
+        transform: translate3d(347px, 0px, 200px) rotateY(120deg)
     }
     50% {
-        transform: rotateY(180deg)
+        transform: translate3d(0px, 0px, 0px) rotateY(180deg)
     }
-    60% {
-        transform: rotateY(216deg)
+    66.67% {
+        transform: translate3d(-347px, 0px, 200px) rotateY(240deg)
     }
-    70% {
-        transform: rotateY(252deg)
+    83.33% {
+        transform: translate3d(-347px, 0px, 600px) rotateY(300deg)
     }
-    80% {
-        transform: rotateY(288deg)
-    }
-    90% {
-        transform: rotateY(324deg)
+    100% {
+        transform: translate3d(0px, 0px, 800px) rotateY(360deg)
     }
 }
 
@@ -57,7 +63,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: .8;
+    /*opacity: .8;*/
 }
 
 .item1 {
@@ -66,19 +72,19 @@
 }
 
 .item2 {
-    transform: translate3d(-347px, -20px, -200px) rotateY(-60deg);
+    transform: translate3d(-347px, 0px, -200px) rotateY(-60deg);
 }
 
 .item3 {
-    transform: translate3d(347px, -20px, -200px) rotateY(60deg);
+    transform: translate3d(347px, 0px, -200px) rotateY(60deg);
 }
 
 .item4 {
-    transform: translate3d(-400px, -40px, -600px) rotateY(-120deg);
+    transform: translate3d(-347px, 0px, -600px) rotateY(-120deg);
 }
 
 .item5 {
-    transform: translate3d(400px, -40px, -600px) rotateY(120deg);
+    transform: translate3d(347px, 0px, -600px) rotateY(120deg);
 }
 
 .item6 {
