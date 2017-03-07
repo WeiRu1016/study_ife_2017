@@ -1,0 +1,29 @@
+.panel {
+    border: 1px solid #aaa;
+    margin: 5px;
+}
+
+input[name="panel"] {
+    display: none;
+}
+
+.panel-body {
+    transition: all .2s ease-in;
+    padding: 0 10px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.panel-heading {
+    display: block;
+    border-bottom: 1px solid #aaa;
+    background: #ddd;
+    padding: 10px;
+}
+
+input[name="panel"]:checked+.panel-body {
+    max-height: 500px;
+    padding: 10px;
+    overflow: auto;
+}
