@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+</head>
+<body>
+	<!-- 页面中原本的 html 模板片段 -->
+	<div id="app">
+	    <p>姓名：{{user.name}}</p>
+	    <p>年龄：{{user.age}}</p>
+	</div>
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript">
+		var a = new MySimpleVue({
+			el: '#app',
+		  	data: {
+			    user: {
+			      name: 'youngwind',
+			      age: 25
+			    }
+		  	}
+		})
+	</script>
+</body>
+</html>
