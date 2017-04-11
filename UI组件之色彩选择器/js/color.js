@@ -54,8 +54,8 @@ function hsl2rgb(h, s, l) {
     var r, g, b;
 
     h = h / 360;
-    s = s / 100;
-    l = l / 100;
+    // s = s / 100;
+    // l = l / 100;
 
     function hue2rgb(p, q, t) {
         if (t < 0) t += 1;
@@ -76,5 +76,5 @@ function hsl2rgb(h, s, l) {
         b = hue2rgb(p, q, h - 1 / 3);
     }
 
-    return { r: r * 255, g: g * 255, b: b * 255 };
+    return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
 };
